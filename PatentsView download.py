@@ -1,3 +1,8 @@
+# PyUSPTO
+# Created by Carlos Navarrete
+# More details cnavarreteliz [at] gmail [dot] com
+
+
 import requests
 import json
 import math
