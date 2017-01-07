@@ -1,6 +1,30 @@
 # PyUSPTO 
-Download granted data from PatentsView with Python
+Download granted data from USPTO by countries with Python
 
-"The PatentsView API is intended to inspire the exploration and enhanced understanding of US intellectual property (IP) and innovation systems. The database driving the API is regularly updated and integrates the best available tools for inventor disambiguation and data quality control. We hope researchers and developers alike will explore the API to discover people and companies and to visualize trends and patterns across the US innovation landscape."
+## Example
+For download granted patents to assignees in Chile, you must use the two-digits ISO 3166-2 code.
+
+    def query(code):
+        output = {
+            "_and": [
+                {"assignee_country": "CL"}        
+            ]
+        }
+        return output
+
+If you want customize the query, for more information visit http://www.patentsview.org/api/patent.html, where you can choose the most indicated field.
+
+Hence, if you want download granted patents to assignees in Chile at 2015, the query is:
+
+    def query(code):
+        output = {
+            "_and": [
+                {"assignee_country": "CL",
+                "patent_year": 2015}        
+            ]
+        }
+        return output
+
+
 
 More information about Public API in http://www.patentsview.org/api/query-language.html
