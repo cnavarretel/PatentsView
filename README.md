@@ -25,6 +25,19 @@ Hence, if you want download granted patents to assignees in Chile at 2015, the q
         }
         return output
 
+## Advanced Options
+This code include four fields: _assignee_country, cpc_group_id, patent_number, patent_year_
+If you need add and/or remove fields, only you must edit _data["f"]_ in download() function.
 
+    data["f"] = [
+        "assignee_country", 
+        "cpc_group_id", 
+        "patent_number", 
+        "patent_year",
+        "inventor_country",
+        "assignee_city",
+        ...
+        "assignee_lastknown_longitude"
+    ]
 
 More information about Public API in http://www.patentsview.org/api/query-language.html
